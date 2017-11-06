@@ -86,9 +86,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="blockData.cs" />
+    <Compile Include="Compressor.cs" />
+    <Compile Include="Decompressor.cs" />
     <Compile Include="GZ.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueController.cs" />
     <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,17 +12,21 @@ namespace GZipTest
             try
             {
                 //Проверяем полученные из командной строки аргументы, если все в порядке - переходим к сжатию/расжатию файла
-                Validation.Check(args);
-                GZ gzip = new GZ();
-                switch (args[0].ToLower())
+               Validation.Check(args);
+
+                 switch (args[0].ToLower())
                 {
                     case "compress":
-                        gzip.Realize(new Compressor(args[1], args[2]));
+                        Compressor gz1 = new Compressor(args[1], args[2]);
+                        gz1.Launch();
                         break;
                     case "decompress":
-                        gzip.Realize(new Decompressor(args[1], args[2]));
+                        Decompressor gz2 = new Decompressor(args[1], args[2]);
+                        gz2.Launch();
                         break;
                 }
+                
+                 Console.ReadLine();
             }
             catch (Exception ex)
             {
